@@ -2,6 +2,8 @@ Config = {}
 
 Config.ProgBarSpeed = 7500
 
+Config.BankMoney = false -- Set to true if you want the money to go into the players bank
+
 Config.Blip = {
     ['x'] = -1527.469,
 	['y'] = -404.6546,                --self explanatory 
@@ -9,61 +11,45 @@ Config.Blip = {
 	['heading'] = 230.55577
 }
 
-Config.Watches = {
-    ['rolex'] = {       --this
-        itemName = 'rolex', --and this must be the same
-        MinSellPrice = 125,
-        MaxSellPrice = 175,
-    }
-}
-
-Config.Chain = {
-    ['goldchain'] = {       --this
-        itemName = 'goldchain', --and this must be the same
-        MinSellPrice = 100,
-        MaxSellPrice = 125,
+Config.PawnItems = {
+    [1] = {
+        item = 'rolex',
+        price = math.random(125,175)
     },
-    ['10kgoldchain'] = {
-        itemName = '10kgoldchain', --and this must be the same
-        MinSellPrice = 125,
-        MaxSellPrice = 140,
+    [2] = {
+        item = 'goldchain',
+        price = math.random(100,125)
     },
-    ['chain_v'] = {
-        itemName = 'chain_v', --and this must be the same
-        MinSellPrice = 75,
-        MaxSellPrice = 100,
-    }
-}
-
-Config.Gems = {
-    ['r'] = {       --this
-        itemName = 'r', --and this must be the same
-        MinSellPrice = 150,
-        MaxSellPrice = 160,
+    [3] = {
+        item = '10kgoldchain',
+        price = math.random(125,140)
     },
-    ['s'] = {
-        itemName = 's', --and this must be the same
-        MinSellPrice = 165,
-        MaxSellPrice = 180,
+    [4] = {
+        item = 'chain_v',
+        price = math.random(75,100)
     },
-    ['pd'] = {
-        itemName = 'pd', --and this must be the same
-        MinSellPrice = 145,
-        MaxSellPrice = 150,
+    [5] = {
+        item = 'r',
+        price = math.random(150,160)
     },
-    ['o'] = {       
-        itemName = 'o', --and this must be the same
-        MinSellPrice = 125,
-        MaxSellPrice = 132,
+    [6] = {
+        item = 's',
+        price = math.random(165,180)
     },
-    ['e'] = {
-        itemName = 'e', --and this must be the same
-        MinSellPrice = 135,
-        MaxSellPrice = 155,
+    [7] = {
+        item = 'pd',
+        price = math.random(145,150)
     },
-    ['d'] = {
-        itemName = 'd', --and this must be the same
-        MinSellPrice = 190,
-        MaxSellPrice = 205,
-    }
+    [8] = {
+        item = 'o',
+        price = math.random(125,132)
+    },
+    [9] = {
+        item = 'e',
+        price = math.random(135,155)
+    },
+    [10] = {
+        item = 'd',
+        price = math.random(190,205)
+    },
 }

@@ -3,17 +3,28 @@ local onDuty = false
 local PlayerJob = {}
 
 
-RegisterNetEvent('QBCore:Client:OnPlayerLoaded')
-AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
-    QBCore.Functions.GetPlayerData(function(PlayerData)
-        PlayerJob = PlayerData.job
-        if PlayerData.job.onduty then
-            if PlayerData.job.name == "gallery" then
+CreateThread(function()
+    while true do
+        Wait(1000)
+        if PlayerJob.name == "gallery" then
+            if not onDuty then
                 TriggerServerEvent("QBCore:ToggleDuty")
             end
         end
-    end)
+    end
 end)
+
+-- update PlayerJob when player is loaded
+
+
+
+
+RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
+    PlayerJob = QBCore.Functions.GetPlayerData().job
+    onDuty = PlayerJob.onduty
+
+end)
+
 
 RegisterNetEvent('QBCore:Client:OnJobUpdate')
 AddEventHandler('QBCore:Client:OnJobUpdate', function(JobInfo)
@@ -98,4 +109,30 @@ RegisterNetEvent('gdn-illegaljob:sellItems2', function()
     end, function() 
         ClearPedTasks(ped)
     end)
+end)
+
+RegisterNetEvent('gdn-illegaljob:pawnitems', function(item)
+    local sellingItem = exports['qb-input']:ShowInput({
+        header = Lang:t('info.title'),
+        submitText = Lang:t('info.sell'),
+        inputs = {
+            {
+                type = 'number',
+                isRequired = false,
+                name = 'amount',
+                text = Lang:t('info.max', { value = item.amount })
+            }
+        }
+    })
+    if sellingItem then
+        if not sellingItem.amount then
+            return
+        end
+
+        if tonumber(sellingItem.amount) > 0 then
+            TriggerServerEvent('gdn-illegaljob:server:sellitems', item.name, sellingItem.amount, item.price)
+        else
+            QBCore.Functions.Notify(Lang:t('error.negative'), 'error')
+        end
+    end
 end)

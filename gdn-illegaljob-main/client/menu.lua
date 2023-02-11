@@ -187,77 +187,77 @@ RegisterNetEvent('Gem:Sell', function()
                 header = "<img src= https://hosting.photobucket.com/images/ss47/monlf/gemstone(1).png width=25> Diamond",
                 txt = "D",
                 params = {
-                    event = "gdn-illegaljob:sellItems2",
+                    event = "gdn-illegaljob:pawnitems",
                 }
             },
             { 
                 header = "<img src= https://hosting.photobucket.com/images/ss47/monlf/gemstone(1).png width=25> Sapphire",
                 txt = "S",
                 params = {
-                    event = "gdn-illegaljob:sellItems2",
+                    event = "gdn-illegaljob:pawnitems",
                 }
             },
             {
                 header = "<img src= https://hosting.photobucket.com/images/ss47/monlf/gemstone(1).png width=25> Emerald",
                 txt = "E",
                 params = {
-                    event = "gdn-illegaljob:sellItems2",
+                    event = "gdn-illegaljob:pawnitems",
                 }
             },
             {
                 header = "<img src= https://hosting.photobucket.com/images/ss47/monlf/gemstone(1).png width=25> Ruby",
                 txt = "R",
                 params = {
-                    event = "gdn-illegaljob:sellItems2",
+                    event = "gdn-illegaljob:pawnitems",
                 }
             },
             {
                 header = "<img src= https://hosting.photobucket.com/images/ss47/monlf/gemstone(1).png width=25> Opal",
                 txt = "O",
                 params = {
-                    event = "gdn-illegaljob:sellItems2",
+                    event = "gdn-illegaljob:pawnitems",
                 }
             },
             {
                 header = "<img src= https://hosting.photobucket.com/images/ss47/monlf/gemstone(1).png width=25> Pink-Diamond",
                 txt = "PD",
                 params = {
-                    event = "gdn-illegaljob:sellItems2",
+                    event = "gdn-illegaljob:pawnitems",
                 }
             },
             {
                 header = "<img src= https://hosting.photobucket.com/images/ss47/monlf/gemstone(1).png width=25> Black-Diamond",
                 txt = "BD",
                 params = {
-                    event = "gdn-illegaljob:sellItems2",
+                    event = "gdn-illegaljob:pawnitems",
                 }
             },
             {
                 header = "<img src= https://hosting.photobucket.com/images/ss47/monlf/8ct-gold-chain.png width=25> V Gold chain",
                 txt = "V Chain",
                 params = {
-                    event = "gdn-illegaljob:sellItems1",
+                    event = "gdn-illegaljob:pawnitems",
                 }
             },
             {
                 header = "<img src= https://hosting.photobucket.com/images/ss47/monlf/8ct-gold-chain.png width=25> 10ct-Gold-chain",
                 txt = "10ct",
                 params = {
-                    event = "gdn-illegaljob:sellItems1",
+                    event = "gdn-illegaljob:pawnitems",
                 }
             },
             {
                 header = "<img src= https://hosting.photobucket.com/images/ss47/monlf/np_rolex-watch.png width=25> Gold Rolex",
                 txt = "Gold Rolex",
                 params = {
-                    event = "gdn-illegaljob:sellItems",
+                    event = "gdn-illegaljob:pawnitems",
                 }
             },
             {
                 header = "<img src= https://hosting.photobucket.com/images/ss47/monlf/5ct-gold-chain.png width=25> Gold Chain",
                 txt = "Gold Chain",
                 params = {
-                    event = "gdn-illegaljob:sellItems1",
+                    event = "gdn-illegaljob:pawnitems",
 
                 }
             },
